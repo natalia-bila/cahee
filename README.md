@@ -12,7 +12,7 @@ Beetroot Academy team project
 *   научиться пользоваться ветвлением в Git;
 *   изучить препроцессоры CSS;
 
-# Правила, То, что мы используем на постоянной основе
+# Правила, договоренности
 
 ### Ветвление
 
@@ -24,11 +24,11 @@ Beetroot Academy team project
 
 ### Название ветки участника
 
-lastname_section�
+`yourName_sectionName`
 
 ### Правила именования по БЭМ
 
-'block_element__modifier'
+`block_element__modifier`
 
 В названиях блока __не используем префиксы__.
 
