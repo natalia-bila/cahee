@@ -12,19 +12,19 @@
 @color-bg:            #ffffff; //use it for light backgrounds with images: hero, subscr, contact
 
 //the next colors are encountered only once, you can not use these variables
-@color-bg-about:      #00c4c4;
-@color-bg-services:   #70bfff;
-@color-bg-galery:     #ffe92f;
-@color-bg-blog:       #b07cf7;
-@color-bg-footer:     #262626;
+//@color-bg-about:      #00c4c4;
+//@color-bg-services:   #70bfff;
+//@color-bg-galery:     #ffe92f;
+//@color-bg-blog:       #b07cf7;
+//@color-bg-footer:     #262626;
 
-@color-btn:           #ff6033;
-@color-btn2:          #5585a2;
-@color-btn3:          #96b92c;
-@color-btn4:          #f72b3b;
+// @color-btn:           #ff6033;
+// @color-btn2:          #5585a2;
+// @color-btn3:          #96b92c;
+// @color-btn4:          #f72b3b;
 
-@color-form:          #00c4c4;
-@color-form-border:   #355b82;
+// @color-form:          #00c4c4;
+// @color-form-border:   #355b82;
 
 //    mixins
 //the shadow under hovered items
@@ -42,7 +42,7 @@
 	font-size: @font-size;
 	font-weight: @font-weight;
 	line-height: @font-size;
-	margin: 100px auto 34px;
+	// margin: 100px auto 34px; //suitable only for h1 elements
 }
 //style for buttons and button-like links. A link element only needs bg-color.
 .button() {
@@ -54,6 +54,11 @@
 	font-size: 20px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+
+.section-title {
+	.heading();
+	margin: 100px auto 34px;
 }
 
 .transition(@property:all) {
