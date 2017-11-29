@@ -1,15 +1,76 @@
+// Definitions
+
+//    fonts 
+@font-default: normal 300 17px~'/'27px 'Raleway', sans-serif;
+
+//    colors
+@color-font:          #262626;
+@color-font-inverted: #ffffff;
+@color-font-footer:   #b9b9b9;
+@color-font-em:       #ff2b58;
+
+@color-bg:            #ffffff; //use it for light backgrounds with images: hero, subscr, contact
+
+//the next colors are encountered only once, you can not use these variables
+//@color-bg-about:      #00c4c4;
+//@color-bg-services:   #70bfff;
+//@color-bg-galery:     #ffe92f;
+//@color-bg-blog:       #b07cf7;
+//@color-bg-footer:     #262626;
+
+// @color-btn:           #ff6033;
+// @color-btn2:          #5585a2;
+// @color-btn3:          #96b92c;
+// @color-btn4:          #f72b3b;
+
+// @color-form:          #00c4c4;
+// @color-form-border:   #355b82;
+
+//    mixins
+//the shadow under hovered items
+.hover-shadow() {
+	&:hover {
+		box-shadow: 0 2px 3px rgba(0,0,0,.5);
+	}
+}
+
+//    common blocks
+
+//parametric mixin for headings h1, h2, h3
+.heading(@font-size: 90px, @font-weight: 700,) {
+	font: @font-default;
+	font-size: @font-size;
+	font-weight: @font-weight;
+	line-height: @font-size;
+	// margin: 100px auto 34px; //suitable only for h1 elements
+}
+//style for buttons and button-like links. A link element only needs bg-color.
+.button() {
+	width: 200px;
+	height: 55px;
+	border: 0px;
+	color: @color-font-inverted;
+	text-transform: uppercase;
+	font-size: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.section-title {
+	.heading();
+	margin: 100px auto 34px;
+}
+
+.transition(@property:all) {
+	transition: @property .5s ease-in;
+}
+// END: Definitions
+//#############################################################################
+
+/*font-family: 'Raleway', sans-serif;*/
 * {
     transition: all .2s ease-in;
 } 
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: #262626;
-  
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  line-height: 25px;
-}
 h1 {
 	margin: 0;
 	font-size: 90px;
@@ -17,7 +78,7 @@ h1 {
 	font-family: 'Raleway', sans-serif;
 }
 h2 {
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: 800;
 	font-family: 'Raleway', sans-serif;
 }
@@ -27,13 +88,14 @@ h3 {
 	font-family: 'Raleway', sans-serif;
 }
 p {
-	font-size: 17px;
-	font-weight: 300;
-	line-height: 27px;
-	font-family: 'Raleway', sans-serif;
+	font: @font-default;
 }
 body {
-	padding-top: 50px;
+	background-image: url(image/screen1.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	     -o-background-size: contain;
+	        background-size: contain;
 }
 .button {
 	width: 200px;
@@ -57,40 +119,30 @@ body {
 	        box-shadow: 0 0 0 0 transparent;
 }
 
+//#############################################################################
+/*      HEADER */
+
 .header {
-	position: relative;
-	z-index: 4;
 	width: 100vw;
-	margin: 0 auto;
-	background: rgba(255,255,255,1);
+	padding: 0 calc((100vw - 1300px) / 2);
+	background: rgba(255,255,255,.5);
+	margin: 50px auto 0;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+	display: flex;
 	position: sticky;
 	top: 0;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+	-webkit-align-items: center;
+	        align-items: center;
 }
-.header_wrap {
-	width: 1170px;
-	margin: 0 auto;	
-	padding: 0 15px;
-}
-.logo {
-	display: inline-block;
-}
-.menu {
-	display: inline-block;
-	float: right;
-	padding-top: 12px;
-}
-
 .link {
 	text-transform: uppercase;
 	position: relative;
 	display: inline-block;
-	margin-left: 33px;
-}
-.link:first-of-type {
-	margin-left: 0;
+	margin-right: 40px;
 }
 .link::before {
 	visibility: hidden;
@@ -106,62 +158,44 @@ body {
 .link:hover:before {
 	visibility: visible;
 }
+
+/* END: HEADER */
+//#############################################################################
+/*      HERO */
+
 .home {
-	margin: 0 auto;
-	width: 1500px;
-	height: 898px;
-	position: relative;
-	z-index: 3;
-}
-.home:before {
-	position: absolute;
-	content: "";
-	width: 1500px;
-	height: 1000px;
-	top: -102px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-	z-index: 0;
-	background-image: url(image/screen1.jpg);
-	background-repeat: no-repeat;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
-	
+	width: 100vw;
+	/*height: 900px;*/
 }
 .home_wrap {
-	position: relative;
-	z-index: 5;
-	max-width: 1170px;
+	width: 1300px;
+	height: 89vh;
 	margin: 0 auto;
-	padding-top: 197px;
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
 }
 .home_content {
 	width: 400px;
+	margin-top: 120px;
 }
-.home_content h2 {
-	margin-bottom: 12px;
-	letter-spacing: 0.01em;
-}
-.home_content p {
-	margin: 0;
-}
-.button__home {
+.home_button {
 	background: #FF6033;
 	color: #fff;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .scroll {
-	display: inline-block;
-	width: 20px;
+	width: 24px;
 	height: 40px;
-	border: 2px solid #000;
+	background: transparent;
+	border: 1px solid #000;
 	-webkit-border-radius: 25px ;
 	        border-radius: 25px ;
 	position: relative;
-	left: 50%;
-	bottom: -290px;
+	margin: 0 auto 70px;
 }
 .scroll:after {
 	position: absolute;
@@ -170,7 +204,7 @@ body {
 	width: 2px;
 	height: 10px;
 	background: #000;
-	left: 9px;
+	left: 11px;
 	top: 5px;
 }
 @keyframes scrol {
@@ -186,6 +220,11 @@ body {
 .scroll:hover {
     animation-play-state: paused;
 }
+
+/* END: HERO */
+//#############################################################################
+/*      ABOUT */
+
 .about {
 	width: 100%;
 	height: 700px;
@@ -205,6 +244,11 @@ body {
 	width: 550px;
 	color: #fff;
 }
+
+/* END: ABOUT */
+//#############################################################################
+/*      SERVICES */
+
 .services {
 	width: 100%;
 	height: 790px;
@@ -230,6 +274,9 @@ body {
 	            justify-content: space-around;
 	margin: auto;
 }
+
+	/*      SERVICES-Category */
+
 .category {
 	width: 400px;
 	height: 100px;
@@ -293,6 +340,13 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+	/* END: SERVICES-Category */
+
+/* END: SERVICES */
+//#############################################################################
+/*      GALLERY */
+
 .gallery {
 	width: 100%;
 	height: 1540px;
@@ -309,6 +363,9 @@ body {
 	width: 45%;
 	margin: 30px auto;
 }
+
+	/*      Gallery-Grid */
+
 .gallery_grid {
   width: 1170px;
   height: 980px;
@@ -351,11 +408,19 @@ body {
 	grid-area: 5/4/span 3/span 3;
 	background-image: url(image/4_5.jpg);
 }
+
+	/* END: Gallery-Grid */
+
 .gallery_button {
 	background: #5585A2;
 	margin-top: 50px;
 	color: #fff;
 }
+
+/* END: GALLERY */
+//#############################################################################
+/*      SUBSCRIBE */
+
 .subscribe {
 	width: 100%;
 	height: 500px;
@@ -395,6 +460,11 @@ body {
 	color: #fff;
 	background: #96B92C;
 }
+
+/* END: SUBSCRIBE */
+//#############################################################################
+/*      BLOG */
+
 .blog {
 	width: 100%;
 	height: 860px;
@@ -485,6 +555,11 @@ body {
 	background: #F72B3B;
 	margin-top: 70px;
 }
+
+/* END: BLOG */
+//#############################################################################
+/*      CONTACT */
+
 .contact {
 	background-image: url(image/screen7.jpg);
 	background-repeat: no-repeat;
@@ -513,6 +588,8 @@ body {
 	-webkit-align-items: flex-start;
 	        align-items: flex-start;
 }
+
+	/*      CONTACT-Form */
 .contact_form {
 	width: 500px;
 	display: flex;
@@ -543,6 +620,8 @@ body {
 	background: rgba(0,196,196,1);
 	border-left: 4px solid #355B82;	
 }
+	/* END: CONTACT-Form */
+
 .contact_info {
 	display: flex;
 	-webkit-flex-direction: column;
@@ -562,6 +641,11 @@ body {
 	font-size: 17px;
 	font-weight: 700;
 }
+
+/* END: CONTACT */
+//#############################################################################
+/*      FOOTER */
+
 .footer {
 	background: #262626;
 	color: #fff;
@@ -589,3 +673,5 @@ body {
 	color: #F24261;
 	font-weight: 700;
 }
+
+/* END: FOOTER */

@@ -2,45 +2,46 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>cahee</title>
-	<link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,800" rel="stylesheet">
+	<title>Cahee</title>
 	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,700,800">
 	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+	<!-- HEADER Section -->
 	<header class="header">
-				<img src="image/logo.png" alt="logo">
-				<nav>
-					<div class="link">
-						<a href="#home">home</a>
-					</div>
-					<div class="link">
-						<a href="#about">about</a>
-					</div>
-					<div class="link">
-						<a href="#services">services</a>
-					</div>
-					<div class="link">
-						<a href="#gallery">gallery</a>
-					</div>
-					<div class="link">
-						<a href="#blog">blog</a>
-					</div>
-					<div class="link">
-						<a href="#contact">contact</a>
-					</div>
-				</nav>
+		<div class="header_wrap">
+			<img class="logo" src="image/logo.png" alt="logo">
+			<nav class="menu">
+					<a class="link" href="#home">home</a>
+					<a class="link" href="#about">about</a>
+					<a class="link" href="#services">services</a>
+					<a class="link" href="#gallery">gallery</a>
+					<a class="link" href="#blog">blog</a>
+					<a class="link" href="#contact">contact</a>
+			</nav>
+		</div>
 	</header>
+	<!-- END: HEADER Section -->
+
+<main>
+
+	<!-- HERO Section -->
 	<section class="home" id="home">
 		<div class="home_wrap">
 			<div class="home_content">
 				<h2>Fresh Life</h2>
 				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-				<button class="button home_button">get free now</button>
+				<button class="button button__home">get free now</button>
 			</div>
 			<a class="scroll" href="#about"></a>
 		</div>
 	</section>
+	<!-- END: HERO Section -->
+
+	<!-- ABOUT Section -->
 	<section class="about" id="about">
 		<div class="about_wrap">
 			<img src="image/screen2.png" alt="" class="about_image">
@@ -49,8 +50,12 @@
 				<p>Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p> <p>Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
 			</div>
 		</div>
-	</section>
-	<!-- section services -->
+  </section>
+
+	<!-- END: ABOUT Section -->
+
+	<!-- SERVICES Section -->
+
 	<section class="services" id="services">
 		<div class="services_wrap">
 			<div class="services_menu">
@@ -92,7 +97,11 @@
 			</div>
 		</div>
 	</section>
-	<!-- /section services -->
+
+	<!-- END: SERVICES Section -->
+
+	<!-- GALLERY Section -->
+
 	<section class="gallery" id="gallery">
 		<div class="gallery_wrap">
 			<h1>Gallery</h1>
@@ -112,6 +121,9 @@
 			<button class="button gallery_button" formaction="#">view more</button>
 		</div>
 	</section>
+	<!-- END: GALLERY Section -->
+
+	<!-- SUBSCRIBE Section -->
 	<section class="subscribe">
 		<div class="subscribe_wrap">
 			<h3>Subscribe To Us</h3>
@@ -122,6 +134,9 @@
 			</form>
 		</div>
 	</section>
+	<!-- END: SUBSCRIBE Section -->
+
+	<!-- BLOG Section -->
 	<section class="blog" id="blog">
 		<div class="blog_wrap">
 			<h1>Blog</h1>
@@ -170,6 +185,9 @@
 			<button class="button blog__button" formaction="#">view more</button>
 		</div>
 	</section>
+	<!-- END: BLOG Section -->
+
+	<!-- CONTACT Section -->
 	<section class="contact" id="contact">
 		<div class="contact_wrap">
 			<h1>Contact</h1>
@@ -191,12 +209,19 @@
 			</div>
 		</div>
 	</section>
+	<!-- END: CONTACT Section -->
+
+</main>
+
+	<!-- FOOTER Section -->
+	<footer class="footer">
+		<div class="footer_wrap">
+			<p>© 2015 Company. All right reserved.</p>
+			<img src="image/logo-small.png" alt="logo">
+			<p>Made with <span>love</span> by <a href="#">Auskteez</a></p>
+		</div>
+	</footer>
+	<!-- END: FOOTER Seection -->
+
 </body>
-<footer class="footer">
-	<div class="footer_wrap">
-		<p>© 2015 Company. All right reserved.</p>
-		<img src="image/logo-small.png" alt="logo">
-		<p>Made with <span>love</span> by <a href="#">Auskteez</a></p>
-	</div>
-</footer>
 </html>
