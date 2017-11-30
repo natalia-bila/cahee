@@ -226,25 +226,32 @@ body {
 /*      ABOUT */
 
 .about {
+	box-sizing: border-box;
 	width: 100%;
+	min-width: 960px;
+	padding: 200px ~'calc((100% - 980px) / 2)';
 	height: 700px;
-	background: #00B2B2;
+	background: url(image/screen2.png) #00B2B2;
+	background-repeat: no-repeat;
+	background-position: 20% center;
+	&_content {
+		// width: 550px;
+		// color: #fff;
+	}
+	&_wrap {
+		width: 1300px;
+		height: 100vh;
+		margin: 0 auto;
+		display: flex;
+		-webkit-justify-content: space-between;
+				justify-content: space-between;
+		-webkit-align-items: center;
+				align-items: center;
+	}
 }
-.about_wrap {
-	width: 1300px;
-	height: 100vh;
-	margin: 0 auto;
-	display: flex;
-	-webkit-justify-content: space-between;
-	        justify-content: space-between;
-	-webkit-align-items: center;
-	        align-items: center;
+.title {
+	margin: 0 20px;
 }
-.about_content {
-	width: 550px;
-	color: #fff;
-}
-
 /* END: ABOUT */
 //#############################################################################
 /*      SERVICES */
