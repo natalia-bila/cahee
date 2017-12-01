@@ -148,43 +148,43 @@ body {
 
 	&_wrap {
 		.wrapper;
-	
-		.header_logo {
-			display: inline-block;
-		}
-		.header_menu {
-			display: inline-block;
-			float: right;
-			padding-top: 12px;
-		
-			.menu_link {
-				text-transform: uppercase;
-				position: relative;
-				display: inline-block;
-				margin-left: 33px;
-				&::before {
-					visibility: hidden;
-	 				position: absolute;
-	 				top: -9px;
-	 				display: block;
-	 				content: "";
-	 				width: 1%;
-	 				height: 3px;
-	 				background: red
-				}
-				&:active:before,
-				&:hover:before {
-					transition: width .5s ease-out;
-					width: 100%;
-					visibility: visible;
-				}
-				&__first {
-					margin-left: 0;
-				}
-			}
-		}
+	}
+	&_logo {
+		display: inline-block;
+	}
+	&_menu {
+		display: inline-block;
+		float: right;
+		padding-top: 12px;
 	}
 }
+.menu_link {
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	margin-left: 33px;
+	&::before {
+		visibility: hidden;
+			position: absolute;
+			top: -9px;
+			display: block;
+			content: "";
+			width: 1%;
+			height: 3px;
+			background: red
+	}
+	&:active:before,
+	&:hover:before {
+		transition: width .5s ease-out;
+		width: 100%;
+		visibility: visible;
+	}
+	&__first {
+		margin-left: 0;
+	}
+}
+	
+
 /* END: HEADER */
 //#############################################################################
 /*      HERO */
@@ -212,7 +212,7 @@ body {
 		background-image: url(../image/screen1.jpg);
 		background-repeat: no-repeat;
 	}
-  &_wrap {
+	&_wrap {
 		.wrapper;
 		z-index: 5;
 		padding-top: 197px;
@@ -227,11 +227,7 @@ body {
 	&_content .p {
 		margin: 0;
 	}
-	.button__home {
-		background: #FF6033;
-		color: #fff;
-		margin-top: 30px;
-	}
+
 	&_scroll {
 		display: inline-block;
 		width: 20px;
@@ -259,6 +255,11 @@ body {
 	    animation-play-state: paused;
 		}
 	}
+}
+.button__home {
+		background: #FF6033;
+		color: #fff;
+		margin-top: 30px;
 }
 @keyframes scrol {
 	0% {transform: translateY(0px);}
