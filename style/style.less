@@ -1,4 +1,5 @@
 // Definitions
+
 //    fonts 
 @font-default: normal 300 17px~'/'27px 'Raleway', sans-serif;
 
@@ -57,7 +58,15 @@
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-
+//wrapper for all section - put it into yours sections
+.wrapper {
+	max-width: 1170px;
+	min-width: 970px;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: relative;
+	// text-align: center;
+}
 .section-title {
 	.heading();
 	margin: 100px auto 34px;
@@ -76,23 +85,23 @@ a {
   font-family: 'Raleway', sans-serif;
   line-height: 25px;
 }
-h1 {
+.h1 {
 	margin: 0;
 	font-size: 90px;
 	font-weight: 800;
 	font-family: 'Raleway', sans-serif;
 }
-h2 {
+.h2 {
 	font-size: 60px;
 	font-weight: 800;
 	font-family: 'Raleway', sans-serif;
 }
-h3 {
+.h3 {
 	font-size: 40px;
 	font-weight: bold;
 	font-family: 'Raleway', sans-serif;
 }
-p {
+.p {
 	font: @font-default;
 }
 body {
@@ -119,7 +128,6 @@ body {
 .button:active {
     box-shadow: 0 0 0 0 transparent;
 }
-
 //#############################################################################
 /*      HEADER */
 
@@ -132,13 +140,15 @@ body {
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+	/*For IE 11*/
+	position: fixed;
+	/*For all browsers*/ 
 	position: sticky;
 	top: 0;
 
 	&_wrap {
-		max-width: 1170px;
-		margin: 0 auto;	
-		padding: 0 15px;
+		.wrapper;
+	
 		.header_logo {
 			display: inline-block;
 		}
@@ -196,24 +206,22 @@ body {
     	left: 0;
     	bottom: 0;
 		z-index: 0;
-		background-image: url(image/screen1.jpg);
+		background-image: url(../image/screen1.jpg);
 		background-repeat: no-repeat;
 	}
 	&_wrap {
-		position: relative;
+		.wrapper;
 		z-index: 5;
-		max-width: 1170px;
-		margin: 0 auto;
-		padding: 197px 15px 0;
+		padding-top: 197px;
 	}
 	&_content {
 		width: 400px;
 	}
-	&_content h2 {
+	&_content .h2 {
 		margin-bottom: 12px;
 		letter-spacing: 0.01em;
 	}
-	&_content p {
+	&_content .p {
 		margin: 0;
 	}
 	.button__home {
@@ -346,16 +354,16 @@ body {
 	background-position: center;
 }
 .category_icon__shopping {
-	background-image: url(image/icon_shoppind.png);
+	background-image: url(../image/icon_shoppind.png);
 }
 .category_icon__product {
-	background-image: url(image/icon_product.png);
+	background-image: url(../image/icon_product.png);
 }
 .category_icon__delivery {
-	background-image: url(image/icon_delivery.png);
+	background-image: url(../image/icon_delivery.png);
 }
 .category_icon__organized {
-	background-image: url(image/icon_organized.png);
+	background-image: url(../image/icon_organized.png);
 }
 .services_item {
 	width: 50%;
@@ -369,7 +377,7 @@ body {
 	        justify-content: center;
 	-webkit-align-items: center;
 	        align-items: center;
-	background-image: url(image/screen3.png);
+	background-image: url(../image/screen3.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -386,10 +394,10 @@ body {
 	background: #FFE92F;
 }
 .gallery_wrap {
-	width: 1300px;
+	max-width: 1170px;
 	height: 100%;
 	margin: 0 auto;
-	padding-top: 100px;
+	padding: 100px 15px 0;
 	text-align: center;
 }
 .gallery_wrap p {
@@ -400,11 +408,12 @@ body {
 	/*      Gallery-Grid */
 
 .gallery_grid {
-  width: 1170px;
+  // min-width: 1024px;
+  max-width: 1170px;
   height: 980px;
   margin: auto;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr~'/' 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
   grid-auto-flow: dense;
 }
@@ -422,24 +431,24 @@ body {
           box-shadow: 4px 4px 10px 0 rgba(0,0,0,.5);
 }
 .element__first {
-	grid-area:1/1/span 4/5;
-	background-image: url(image/4_1.jpg);
+	grid-area:1~'/'1~'/'span 4~'/'5;
+	background-image: url(../image/4_1.jpg);
 }
 .element__second {
-	grid-area: 1/5/span 2/span 2;
-	background-image: url(image/4_2.jpg);
+	grid-area: 1~'/'5~'/'span 2~'/'span 2;
+	background-image: url(../image/4_2.jpg);
 }
 .element__third {
-	grid-area: 3/5/span 2/span 2;
-	background-image: url(image/4_3.jpg);
+	grid-area: 3~'/'5~'/'span 2~'/'span 2;
+	background-image: url(../image/4_3.jpg);
 }
 .element__four {
-	grid-area: 5/1/span 3/span 3;
-	background-image: url(image/4_4.jpg);
+	grid-area: 5~'/'1~'/'span 3~'/'span 3;
+	background-image: url(../image/4_4.jpg);
 }
 .element__five {
-	grid-area: 5/4/span 3/span 3;
-	background-image: url(image/4_5.jpg);
+	grid-area: 5~'/'4~'/'span 3~'/'span 3;
+	background-image: url(../image/4_5.jpg);
 }
 
 	/* END: Gallery-Grid */
